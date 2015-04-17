@@ -1,0 +1,1 @@
+<?php	class clsDescriptionProd	{		public $Id;//string		public $hedieuhanh;//string		public $loaimanhinh;		public $mayanh;		public $kichthuocmanhinh;		public $vixulicpu;		public $quayphim;		public $bonhotrong;		public $phankhucsanpham;		public $danhba;		public $thenhongoai;		public $gioihancuocgoi;		public $dungluongpin;	}?>

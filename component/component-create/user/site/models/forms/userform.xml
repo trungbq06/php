@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_AVA_FORM_LBL_USER_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="school_id" type="list"
+                
+            label="COM_AVA_FORM_LBL_USER_SCHOOL_ID"
+            description="COM_AVA_FORM_DESC_USER_SCHOOL_ID" 
+                
+                
+                 required="true" >
+                <option value="1">mot</option>
+                <option value="2">hai</option>
+                <option value="3">ba</option>
+        </field> 
+
+       <field name="name" type="text" size="40" class="inputbox"
+        
+            label="COM_AVA_FORM_LBL_USER_NAME"
+            description="COM_AVA_FORM_DESC_USER_NAME" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="phone_number" type="text" size="40" class="inputbox"
+        
+            label="COM_AVA_FORM_LBL_USER_PHONE_NUMBER"
+            description="COM_AVA_FORM_DESC_USER_PHONE_NUMBER" 
+        
+         validate="tel" 
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="email" type="text" size="40" class="inputbox"
+        
+            label="COM_AVA_FORM_LBL_USER_EMAIL"
+            description="COM_AVA_FORM_DESC_USER_EMAIL" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="address" type="text" size="40" class="inputbox"
+        
+            label="COM_AVA_FORM_LBL_USER_ADDRESS"
+            description="COM_AVA_FORM_DESC_USER_ADDRESS" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="job" type="text" size="40" class="inputbox"
+        
+            label="COM_AVA_FORM_LBL_USER_JOB"
+            description="COM_AVA_FORM_DESC_USER_JOB" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+ </fieldset> 
+
+ <fieldset 
+                        name="accesscontrol">
+                       <field name="asset_id" type="hidden" filter="unset" />
+                       <field name="rules"
+                            type="rules"
+                            label="JFIELD_RULES_LABEL"
+                            translate_label="false"
+                            filter="rules"
+                            validate="rules"
+                            class="inputbox"
+                            component="com_ava"
+                            section="user"
+                        />
+
+	</fieldset>
+
+</form>

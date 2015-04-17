@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_AVA_FORM_LBL_SCHOOL_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="name" type="text" size="40" class="inputbox"
+        
+            label="COM_AVA_FORM_LBL_SCHOOL_NAME"
+            description="COM_AVA_FORM_DESC_SCHOOL_NAME" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="address" type="text" size="40" class="inputbox"
+        
+            label="COM_AVA_FORM_LBL_SCHOOL_ADDRESS"
+            description="COM_AVA_FORM_DESC_SCHOOL_ADDRESS" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="phone_number" type="text" size="40" class="inputbox"
+        
+            label="COM_AVA_FORM_LBL_SCHOOL_PHONE_NUMBER"
+            description="COM_AVA_FORM_DESC_SCHOOL_PHONE_NUMBER" 
+        
+         validate="tel" 
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="fax" type="text" size="40" class="inputbox"
+        
+            label="COM_AVA_FORM_LBL_SCHOOL_FAX"
+            description="COM_AVA_FORM_DESC_SCHOOL_FAX" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="email" type="text" size="40" class="inputbox"
+        
+            label="COM_AVA_FORM_LBL_SCHOOL_EMAIL"
+            description="COM_AVA_FORM_DESC_SCHOOL_EMAIL" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="website" type="text" size="40" class="inputbox"
+        
+            label="COM_AVA_FORM_LBL_SCHOOL_WEBSITE"
+            description="COM_AVA_FORM_DESC_SCHOOL_WEBSITE" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="manager" type="text" size="40" class="inputbox"
+        
+            label="COM_AVA_FORM_LBL_SCHOOL_MANAGER"
+            description="COM_AVA_FORM_DESC_SCHOOL_MANAGER" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+ </fieldset> 
+
+ <fieldset 
+                        name="accesscontrol">
+                       <field name="asset_id" type="hidden" filter="unset" />
+                       <field name="rules"
+                            type="rules"
+                            label="JFIELD_RULES_LABEL"
+                            translate_label="false"
+                            filter="rules"
+                            validate="rules"
+                            class="inputbox"
+                            component="com_ava"
+                            section="school"
+                        />
+
+	</fieldset>
+
+</form>

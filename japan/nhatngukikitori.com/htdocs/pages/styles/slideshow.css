@@ -1,0 +1,10 @@
+#slider { height:370px; position:relative; overflow:hidden; }
+#slider-holder { width:1000px; height:370px; position:relative; overflow:hidden; }
+#slider-holder .jcarousel-clip{ width:1000px; height:370px; position:relative; overflow:hidden; }
+#slider-holder ul{ width:1000px; height:370px; position:relative; overflow:hidden; list-style-type: none;}
+#slider-holder ul li{ width:1000px; height:370px; position:relative; overflow:hidden; float:left; }
+
+#slider-nav { position:absolute; top:340px; left:900px; z-index:2;}
+#slider-nav a{ font-size:0; line-height:0; text-indent: -4000px; width:10px; height:10px; border:solid 1px #8b0000; background:#8b0000; float:left; margin-right:5px; }
+#slider-nav a:hover,
+#slider-nav a.active { background:#fff;}
