@@ -305,7 +305,7 @@ var GameScene = View.extend({
         this.answer4MenuToggle.setPosition(this.winSize.width / 2 + 250, this.winSize.height / 2 - 270);
         menu.addChild(this.answer4MenuToggle);
 
-        var answer4Str = this.gameModel.getCurrentQuestionInfo().answerC;
+        var answer4Str = this.gameModel.getCurrentQuestionInfo().answerD;
         var answer4Label;
         if (answer4Str.length > 30) {
             answer4Label = new cc.LabelTTF("D: " + answer4Str, "Tahoma", 18, cc.size(410, 58), cc.TEXT_ALIGNMENT_LEFT, cc.VERTICAL_TEXT_ALIGNMENT_CENTER);
