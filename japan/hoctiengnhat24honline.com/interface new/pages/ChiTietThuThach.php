@@ -36,14 +36,13 @@ include '../dao/GameDAO.php';
                         <img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
                 </div>
         <![endif]-->
-        <style>
+		<style>
             .boxInfoGame{
 				float: left;
-                height: 240px;
-                width: 280px;
-                border: black dotted thin;                
+                height: 200px;
+                width: 200px;
+                border: black dotted thin;
 				margin: 10px;
-				margin-bottom: 20px;
             }
 			.labelDanhMuc{
 				margin-top: 10px;
@@ -70,13 +69,24 @@ include '../dao/GameDAO.php';
                     <div class="box1">
                         <div class="wrapper">
                             <?php
-                            if ((isset($_SESSION['loginAcc'])) and ( isset($_SESSION['id']))) {
+                            if ((isset($_SESSION['loginAcc'])) and (isset($_SESSION['id']))) {
                                 if ($_SESSION['loginAcc'] == 'Yes') {
                                     $active = readAtAccByIdAcc($_SESSION["id"])->Status;
-                                    if ($active == 'Yes') {
-                                        ?>
-                                        <h2 align="center">Hãy Chơi Game Thử Thách Tiếng Nhật Các Bạn Ơi</h2>
-                                        <div class="labelDanhMuc"><h4>Game Mới Nhất</h4></div>
+                                    if ($active == 'Yes') {    
+										$id = $_GET['id'];                                    
+                                    ?>
+                                    <h2 align="center"><?php echo readGameById($id)->name ?> ^_^</h2>
+                                    <p align="center">
+									<?php 
+										if(readGameById($id)->mobile == 1){
+									?>
+									<iframe src="<?php echo readGameById($id)->path ?>" width="800" height="600"></iframe>
+									<?php } else{ ?>
+									<object width="800" height="600" data="<?php echo readGameById($id)->path ?>" type="application/x-shockwave-flash"><param name="allowfullscreen" value="true"><param name="wmode" value="transparent"></object>
+									<?php } ?>
+									</p>
+									<br/>									
+									<div class="labelDanhMuc"><h4>Game Liên Quan</h4></div>																		
 										<?php 
 											$Topic = readGamesByType(1);
                                             foreach ($Topic as $item) {
@@ -84,25 +94,24 @@ include '../dao/GameDAO.php';
 										<a href="ChiTietThuThach.php?id=<?php echo $item->id ?>" title="<?php echo $item->name ?>">
 										<div class="boxInfoGame">
 											<p align="center"><b><i><?php echo $item->name ?></i></b></p>
-											<image src="<?php echo $item->image ?>" style="width: 280px; height: 200px;" />
+											<image src="<?php echo $item->image ?>" style="width: 200px; height: 160px;" />
                                         </div>
 										</a>
 										<?php }?>	
-										
-                                        <div class="labelDanhMuc"><h4>Game Khác</h4></div>
 										<?php 
-										$Topic = readGamesByType(0);
+											$Topic = readGamesByType(0);
                                             foreach ($Topic as $item) {
 										?>
 										<a href="ChiTietThuThach.php?id=<?php echo $item->id ?>" title="<?php echo $item->name ?>">
 										<div class="boxInfoGame">
 											<p align="center"><b><i><?php echo $item->name ?></i></b></p>
-											<image src="<?php echo $item->image ?>" style="width: 280px; height: 190px;" />
+											<image src="<?php echo $item->image ?>" style="width: 200px; height: 160px;" />
                                         </div>
 										</a>
-										<?php }?>
-										<?php
-                                    } else {
+										<?php }?>	
+										                                        									
+                                    <?php
+                                } else {
                                         ?>
                                         <h3>Mời Bạn Nạp Tiền Để Xem Nội Dung Này!</h3>
                                         <h2><a href="HocPhi.php">Click vào đây để hướng dẫn nạp tiền</a></h2>
