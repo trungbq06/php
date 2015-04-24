@@ -9,14 +9,9 @@ var GameModel = Model.extend({
     questionListContinue: null,
     numOfStar: null,
     statusAnswer: null,
-    rank100json: null,
-    idUser: null,
-    nameUser: null,
-    statusTextHelp: null,
     indexQuestionAnswer: -1,
     load: function () {
-        this.start();
-        this.getInfoUser();
+        this.start();        
     },
     start: function () {
         cc.director.getScheduler().scheduleUpdateForTarget(this, 1, false);
@@ -45,7 +40,6 @@ var GameModel = Model.extend({
     },
     loadDB: function () {
         this.resourceModel = ResourceModel.getInstance();
-        //this.resourceModel.loadQuestion();
     },
     play: function () {
         this.questionList = this.resourceModel.getQuestList();
@@ -63,13 +57,11 @@ var GameModel = Model.extend({
         this.fireEvent(new GameEvent(Events.GAMEMODEL_START_GAME, null));
         if (this.questionListContinue.length > 0) {
             var _this = this;
-            cc.loader.loadImg("res/data/" + this.questionListContinue[0].image, { "isCrossOrigin": false }, function () {
-                //this.fireEvent(new GameEvent(Events.GAMEMODEL_START_GAME, null));
+            cc.loader.loadImg("res/data/" + this.questionListContinue[0].image, {"isCrossOrigin": false}, function () {
                 _this.nextLocation();
             });
             cc.loader.loadImg("res/data/" + this.questionListContinue[0].imageResult);
         } else {
-            //this.fireEvent(new GameEvent(Events.GAMEMODEL_START_GAME, null));
             this.nextLocation();
         }
     },
@@ -98,11 +90,11 @@ var GameModel = Model.extend({
         this.remainTime = 0;
 
         var _this = this;
-        cc.loader.loadImg("res/data/" + this.questionListContinue[this.currentQuestIndex].image, { "isCrossOrigin": false }, function () {
+        cc.loader.loadImg("res/data/" + this.questionListContinue[this.currentQuestIndex].image, {"isCrossOrigin": false}, function () {
             _this.showLocation();
         });
 
-        
+
     },
     showLocation: function () {
         this.setGameState(GameModel.SHOW_QUESTION_STATE);
@@ -170,7 +162,6 @@ var GameModel = Model.extend({
             this.fireEvent(new GameEvent(Events.GAMEMODEL_SHOW_ANSWER, null));
         } else {
             this.setGameState(GameModel.GAME_OVER);
-            this.postScore();
             this.fireEvent(new GameEvent(Events.GAMEMODEL_GAME_OVER, null));
         }
     },
@@ -209,7 +200,7 @@ var GameModel = Model.extend({
     },
     shuffleQuest: function (strValue) {
         this.indexQuestionAnswer += 1;
-        var array = new Array();        
+        var array = new Array();
 
         for (var i = this.indexQuestionAnswer; i < strValue.length; i++) {
             array.push(strValue[i]);
@@ -217,9 +208,9 @@ var GameModel = Model.extend({
 
         for (var i = 0; i < this.indexQuestionAnswer; i++) {
             array.push(strValue[i]);
-        }        
+        }
 
-        return array;        
+        return array;
     },
     stopGame: function () {
         this.setGameState(GameModel.GAME_WAITING_STATE);
@@ -247,73 +238,6 @@ var GameModel = Model.extend({
         this.numOfStar -= 1;
         this.fireEvent(new GameEvent(Events.GAMEMODEL_USE_HELP, null));
     },
-    useTextHelp: function () {        
-        if (this.numOfStar <= 1 || this.statusTextHelp === true) {
-            return;
-        }
-        this.statusTextHelp = true;
-        this.numOfStar -= 1;
-        this.fireEvent(new GameEvent(Events.GAMEMODEL_USE_HELP_TEXT, null));
-    },
-    postScore: function () {
-        var questIndex = this.getCurrentQuestIndex();
-        if (this.gameState === GameModel.GAME_OVER && questIndex > 0) {
-            var dataStr = '{id: "' + this.idUser + '", name: "' + this.nameUser + '", level: ' + questIndex + ', score: ' + this.getScore() + '}';
-            console.log(dataStr);
-            $.ajax({
-                type: "POST",
-                contentType: "application/json; charset=utf-8",
-                url: res.URLServer + "Default.aspx/postScore",
-                data: dataStr,
-                dataType: "json",
-                success: function (msg) {
-                    //$("#error").html(msg.d);
-                    console.log(msg.d);
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    //$("#error").html(errorThrown);
-                    console.log(errorThrown);
-                }
-            });
-        }
-    },
-    getRank100: function () {
-        var dataStr = '{id: "' + this.idUser + '"}';
-        //var dataStr = '{id: "Guest"}';
-        $.ajax({
-            type: "POST",            
-            contentType: "application/json; charset=utf-8",
-            url: res.URLServer + "Default.aspx/getRank",
-            data: dataStr,
-            dataType: "json",
-            success: function (msg) {
-                var textMSG = JSON.stringify(msg);
-                var smslLengthLast = textMSG.length - 8;
-                textMSG = textMSG.substr(6, smslLengthLast);
-                textMSG = textMSG.split("\\").join("");
-
-                var gameModel = GameModel.getInstance();
-                gameModel.rank100json = JSON.parse(textMSG);
-                if (gameModel.rank100json.id !== "") {
-                    console.log("new id");
-                    gameModel.idUser = gameModel.rank100json.id;
-                    gameModel.nameUser = gameModel.rank100json.id;
-                }
-                gameModel.getRankSuccess();
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                //$("#error").html(errorThrown);
-                console.log(errorThrown);
-            }
-        });
-    },
-    getRankSuccess: function () {
-        if (this.gameState === GameModel.GAME_OVER) {
-            this.fireEvent(new GameEvent(Events.GAMESCENE_GET_RANK_SUCCESS, null));
-        } else {
-            this.fireEvent(new GameEvent(Events.STARTSCENE_GET_RANK_SUCCESS, null));
-        }
-    },
     getCurrentQuestIndex: function () {
         return this.currentQuestIndex;
     },
@@ -331,16 +255,6 @@ var GameModel = Model.extend({
     },
     setGameStateStartScene: function () {
         this.setGameState(GameModel.GAME_WAITING_STATE);
-    },
-    getInfoUser: function () {        
-        var fbUtils = FacebookUtils.getInstance();
-        this.idUser = fbUtils.getId();
-        this.nameUser = fbUtils.getName();        
-
-        if (this.idUser === null || this.idUser === undefined) {            
-            this.idUser = "";            
-            this.nameUser = "";            
-        }
     }
 });
 

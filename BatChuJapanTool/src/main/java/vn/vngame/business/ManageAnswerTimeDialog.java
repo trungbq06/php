@@ -108,7 +108,7 @@ public class ManageAnswerTimeDialog extends javax.swing.JDialog {
                 return;
             }
 
-            dataGameDAO.getDataGame().setAnswerTime(Integer.parseInt(anserTime));
+            dataGameDAO.getDataGame().setAnswerTime(Integer.parseInt(anserTime) + 1);
             dataGameDAO.writeDataFile();
 
             JOptionPane.showMessageDialog(this, "Thành Công");

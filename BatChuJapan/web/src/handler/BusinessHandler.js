@@ -14,10 +14,6 @@ var BusinessHandler = GameHandler.extend({
             SoundModel.getInstance().useHelpSound();
             gameModel.useHelp(gameEvent.getEventData());
 
-        } else if (gameEvent.getEventCode() === Events.GAMESCENE_TEXT_HELP_CLICK) {
-            SoundModel.getInstance().useHelpSound();
-            gameModel.useTextHelp();
-
         } else if (gameEvent.getEventCode() === Events.GAMESCENE_ANSWER_CLICK) {
             SoundModel.getInstance().buttonClickSound();
             SoundModel.getInstance().stopCurrentEffect();
@@ -38,21 +34,7 @@ var BusinessHandler = GameHandler.extend({
             this.getController().listen(gameScene);
             cc.director.runScene(gameScene);
             gameModel.play();
-
-        } else if (gameEvent.getEventCode() === Events.GAMEMODEL_STOP_GAME) {
-            SoundModel.getInstance().stopCurrentEffect();
-            SoundModel.getInstance().buttonClickSound();
-            gameModel.stopGame();
-        } else if (gameEvent.getEventCode() === Events.GAMEMODEL_CONTINUE_GAME) {
-            gameModel.continueGame();
-        } else if (gameEvent.getEventCode() === Events.BACKSTART_SCENE) {
-            gameModel.setGameStateStartScene();
-            SoundModel.getInstance().buttonClickSound();
-            SoundModel.getInstance().stopCurrentEffect();
-            var startScene = new StartScene(gameModel);
-            this.getController().listen(startScene);
-            cc.director.runScene(startScene);
-
+        
         } else if (gameEvent.getEventCode() === Events.BUTTON_CLICK) {
             SoundModel.getInstance().buttonClickSound();
 
@@ -63,14 +45,6 @@ var BusinessHandler = GameHandler.extend({
         } else if (gameEvent.getEventCode() === Events.WIN_GAME) {
             this.soundId = SoundModel.getInstance().winGameSound();
 
-        } else if (gameEvent.getEventCode() === Events.VOLUME_OFF) {
-            SoundModel.getInstance().turnOffSound();
-
-        } else if (gameEvent.getEventCode() === Events.VOLUME_ON) {
-            SoundModel.getInstance().turnOnSound();
-
-        } else if (gameEvent.getEventCode() === Events.STOP_EFFECT) {
-            SoundModel.getInstance().stopCurrentEffect();
         }
     }
 });

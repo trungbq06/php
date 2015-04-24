@@ -15,6 +15,22 @@ var StartScene = View.extend({
         };
         gameModel.addEventListener(this._listener);
     },
+    init: function () {
+        this.createBackground();
+    },
+    onEnter: function () {
+        this._super();
+    },
+    processEvent: function (event) {
+        if (event.getEventCode() === Events.GAMEMODEL_START_GAME) {
+
+        } else if (event.getEventCode() === Events.STARTSCENE_GET_RANK_SUCCESS) {
+            if (this.rankLayer !== null) {
+                this.rankLayer.addTableRank();
+            }
+
+        }
+    },
     createBackground: function () {
         var size = cc.winSize;
 
@@ -32,6 +48,11 @@ var StartScene = View.extend({
         var lightSprite = cc.Sprite.create(res.Light_png);
         lightSprite.setPosition(size.width / 2, size.height - lightSprite.getContentSize().height / 2);
         this.mainLayer.addChild(lightSprite, 1);
+
+        var levelLabel = cc.LabelTTF.create("Đoán Chữ Tiếng Nhật", res.FontCustom, 72);
+        levelLabel.setPosition(size.width / 2, size.height - 80);
+        levelLabel.setColor(cc.color(255, 255, 255));
+        this.mainLayer.addChild(levelLabel, 2);
 
         var logoSprite = cc.Sprite.create(res.Logo_png);
         logoSprite.setPosition(size.width / 2, 400);
@@ -62,38 +83,6 @@ var StartScene = View.extend({
     },
     onPlayGame: function (button) {
         this.fireEvent(new GameEvent(Events.STARTSCENE_PLAY_CLICK, null));
-    },
-    onShowRanking: function (button) {
-        this.fireEvent(new GameEvent(Events.BUTTON_CLICK, null));
-        this.gameModel.getRank100();
-        this.mainLayer.removeFromParent(true);
-
-        this.rankLayer = new RankLayer(this, this.backStartScene);
-        this.addChild(this.rankLayer, 3);
-    },
-    init: function () {
-        this.createBackground();
-//        this.scheduleUpdate();
-    },
-    onEnter: function () {
-        this._super();
-    },
-    processEvent: function (event) {
-        if (event.getEventCode() === Events.GAMEMODEL_START_GAME) {
-
-        } else if (event.getEventCode() === Events.STARTSCENE_GET_RANK_SUCCESS) {
-            if (this.rankLayer !== null) {
-                this.rankLayer.addTableRank();
-            }
-
-        }
-    },
-    backStartScene: function () {
-        this.fireEvent(new GameEvent(Events.BUTTON_CLICK, null));
-        this.fireEvent(new GameEvent(Events.BACKSTART_SCENE, null));
-    },
-    onEventButtonClick: function (button) {
-        window.location = this.gameModel.resourceModel.getEventLink();
     }
 });
 

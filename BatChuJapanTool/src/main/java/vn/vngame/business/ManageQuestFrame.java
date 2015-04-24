@@ -501,7 +501,7 @@ public class ManageQuestFrame extends javax.swing.JFrame {
     }
 
     public void onAnswerTimeChanged() {
-        this.lblAnswerTime.setText(this.dataGameDAO.getDataGame().getAnswerTime() + "s");
+        this.lblAnswerTime.setText(this.dataGameDAO.getDataGame().getAnswerTime() - 1 + "s");
     }
 
     private DefaultListModel itemListModel;

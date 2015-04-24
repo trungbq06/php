@@ -1,7 +1,7 @@
 {
     "project_type": "javascript",
     "debugMode": 1,
-    "showFPS": true,
+    "showFPS": false,
     "frameRate": 60,
     "id": "gameCanvas",
     "renderMode": 0,
@@ -17,14 +17,10 @@
         "src/mvc/GameEvent.js",
         "src/mvc/Model.js",
         "src/mvc/View.js",
-        "src/model/GameModel.js",
-        "src/utils/FacebookUtils.js",
+        "src/model/GameModel.js",       
         "src/model/SoundModel.js",
-        "src/model/ResourceModel.js",
-        "src/layer/QuitLayer.js",
-        "src/scene/GameScene.js",
-        "src/layer/TableRankLayer.js",
-        "src/layer/RankLayer.js",
+        "src/model/ResourceModel.js",      
+        "src/scene/GameScene.js",       
         "src/scene/StartScene.js"
     ]
 }

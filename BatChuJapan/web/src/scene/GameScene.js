@@ -3,7 +3,6 @@ var GameScene = View.extend({
     _listener: undefined,
     backgroundSprite: null,
     starSprite: null,
-    timelineSprite: null,
     charLabel: null,
     questionLayer: null,
     partLayer: null,
@@ -24,6 +23,7 @@ var GameScene = View.extend({
     loadingLabel: null,
     keyboardEvent: null,
     timeLabel: null,
+    helpLabel: null,
     ctor: function (gameModel) {
         this._super();
         this.gameModel = gameModel;
@@ -69,15 +69,15 @@ var GameScene = View.extend({
         this.menu.setPosition(0, 0);
         this.partLayer.addChild(this.menu);
 
-        var helpTextSprite = cc.MenuItemImage.create(res.HELPTEXT_PNG, res.HELPTEXT_SELECT_PNG);
-        helpTextSprite.setPosition(helpTextSprite.getContentSize().width, this.backgroundSprite.getContentSize().height - 30);
-        helpTextSprite.setCallback(this.onHelpButtonClick, this);
-        this.menu.addChild(helpTextSprite);
-
         this.levelLabel = cc.LabelTTF.create("Câu Hỏi: 0", res.FontCustom, 46);
-        this.levelLabel.setPosition(helpTextSprite.getPosition().x + this.levelLabel.getContentSize().width, cc.director.getVisibleSize().height - 40);
+        this.levelLabel.setPosition(this.levelLabel.getContentSize().width / 2, this.backgroundSprite.getContentSize().height - 40);
         this.levelLabel.setColor(cc.color(255, 255, 255));
         this.partLayer.addChild(this.levelLabel, 2);
+
+        var helpTextSprite = cc.MenuItemImage.create(res.HELPTEXT_PNG, res.HELPTEXT_SELECT_PNG);
+        helpTextSprite.setPosition(this.backgroundSprite.getContentSize().width / 2, this.backgroundSprite.getContentSize().height - 30);
+        helpTextSprite.setCallback(this.onHelpButtonClick, this);
+        this.menu.addChild(helpTextSprite);
 
         this.loadingLabel = new cc.LabelTTF("Loading...", "Arial", 30);
         this.loadingLabel.setPosition(cc.director.getVisibleSize().width / 2, cc.director.getVisibleSize().height / 2 + 77);
@@ -97,7 +97,7 @@ var GameScene = View.extend({
         suggestSprite.setPosition(cc.director.getVisibleSize().width / 2, cc.director.getVisibleSize().height / 2 + 77);
         this.questionLayer.addChild(suggestSprite);
 
-        this.timeLabel = cc.LabelTTF.create("30", "Tahoma", 48);
+        this.timeLabel = cc.LabelTTF.create("", "Tahoma", 48);
         this.timeLabel.setPosition(180, 70);
         this.timeLabel.setColor(cc.color(254, 235, 59));
         this.questionLayer.addChild(this.timeLabel, 2);
@@ -188,20 +188,11 @@ var GameScene = View.extend({
         var levelStr = "Câu Hỏi: " + level;
         this.levelLabel.setString(levelStr);
 
-        //Star
-        this.starLayer = cc.Layer.create();
-        this.questionLayer.addChild(this.starLayer);
-        for (var i = GameModel.TOTAL_STAR - 1; i >= 0; i--) {
-            var starSprite;
-            if (i < this.gameModel.getStar()) {
-                starSprite = cc.Sprite.create(res.InGameStar_png);
-            } else {
-                starSprite = cc.Sprite.create(res.InGameStar_BG_png);
-            }
-            starSprite.setPosition(cc.director.getVisibleSize().width - starSprite.getContentSize().width * (i + 1) + 5,
-            this.backgroundSprite.getContentSize().height - starSprite.getContentSize().height / 2 - 5);
-            this.starLayer.addChild(starSprite);
-        }
+        //Star           
+        this.helpLabel = cc.LabelTTF.create("Bạn còn 2 sự trợ giúp", "Tahoma", 36);
+        this.helpLabel.setPosition(this.backgroundSprite.getContentSize().width - this.helpLabel.getContentSize().width / 2, this.backgroundSprite.getContentSize().height - 30);
+        this.helpLabel.setColor(cc.color(254, 235, 59));
+        this.questionLayer.addChild(this.helpLabel, 2);
     },
     init: function () {
         this.scheduleUpdate();
@@ -229,17 +220,14 @@ var GameScene = View.extend({
             this.fireEvent(new GameEvent(Events.WIN_GAME, null));
             this.questionLayer.removeFromParent(true);
             this.gameNextStageLayer = cc.LayerColor.create(cc.color(0, 0, 0, 180));
-            this.addChild(this.gameNextStageLayer, 10);
-            var effectStarSprite = cc.Sprite.create(res.StarEffect_png);
-            effectStarSprite.setPosition(this.gameNextStageLayer.getContentSize().width / 2, this.gameNextStageLayer.getContentSize().height / 2);
-            this.gameNextStageLayer.addChild(effectStarSprite, 1);
-            var nextStageBoardSprite = cc.Sprite.create(res.BROAD_ANSWER_PNG);
+            this.addChild(this.gameNextStageLayer, 10);           
+            var nextStageBoardSprite = cc.Sprite.create(res.GameOverBoard_png);
             nextStageBoardSprite.setPosition(this.gameNextStageLayer.getContentSize().width / 2, this.gameNextStageLayer.getContentSize().height / 2);
             this.gameNextStageLayer.addChild(nextStageBoardSprite, 2);
             var menuGameOver = cc.Menu.create();
             menuGameOver.setPosition(0, 0);
             nextStageBoardSprite.addChild(menuGameOver);
-            var nextStageButton = cc.MenuItemImage.create(res.NextStage1_png, res.NextStage2_png);
+            var nextStageButton = cc.MenuItemImage.create(res.Next_png, res.Next_Select_png);
             nextStageButton.setPosition(nextStageBoardSprite.getContentSize().width / 2, 15);
             menuGameOver.addChild(nextStageButton);
             nextStageButton.setCallback(this.onNextStageButtonClick, this);
@@ -254,17 +242,17 @@ var GameScene = View.extend({
             }
             var congratLabel = new cc.LabelTTF(textCongrat, res.FontCustom, 30);
             congratLabel.setColor(cc.color(65, 27, 9));
-            congratLabel.setPosition(nextStageBoardSprite.getContentSize().width / 2, nextStageBoardSprite.getContentSize().height / 2 + 50);
+            congratLabel.setPosition(nextStageBoardSprite.getContentSize().width / 2, nextStageBoardSprite.getContentSize().height - 50);
             nextStageBoardSprite.addChild(congratLabel);
 
             var dapAnLabel = new cc.LabelTTF("Đáp án:", res.FontCustom, 30);
             dapAnLabel.setColor(cc.color(65, 27, 9));
-            dapAnLabel.setPosition(nextStageBoardSprite.getContentSize().width / 2, nextStageBoardSprite.getContentSize().height / 2 - 40);
+            dapAnLabel.setPosition(nextStageBoardSprite.getContentSize().width / 2, nextStageBoardSprite.getContentSize().height / 2);
             nextStageBoardSprite.addChild(dapAnLabel);
 
             var resultLabel = new cc.LabelTTF(this.gameModel.getCurrentQuest().answer, res.FontCustom, 32.0, cc.size(250, 70), cc.TEXT_ALIGNMENT_CENTER, cc.VERTICAL_TEXT_ALIGNMENT_CENTER);
             resultLabel.setColor(cc.color(65, 27, 9));
-            resultLabel.setPosition(nextStageBoardSprite.getContentSize().width / 2, nextStageBoardSprite.getContentSize().height / 2 - 90);
+            resultLabel.setPosition(nextStageBoardSprite.getContentSize().width / 2, nextStageBoardSprite.getContentSize().height / 2 - 50);
             nextStageBoardSprite.addChild(resultLabel);
 
         } else if (event.getEventCode() === Events.GAMEMODEL_GAME_OVER) {
@@ -272,7 +260,7 @@ var GameScene = View.extend({
             this.removeChild(this.gameNextStageLayer, true);
             this.removeChild(this.helpLayer, true);
             this.processGameOver(event);
-            
+
         } else if (event.getEventCode() === Events.GAMEMODEL_WIN_GAME) {
             this.removeChild(this.gameNextStageLayer, true);
             this.removeChild(this.helpLayer, true);
@@ -325,17 +313,6 @@ var GameScene = View.extend({
         }
         this.fireEvent(new GameEvent(Events.GAMESCENE_HELP_CLICK, countUnAnswer));
     },
-    onHelpTextButtonClick: function (button) {
-        this.fireEvent(new GameEvent(Events.GAMESCENE_TEXT_HELP_CLICK, null));
-    },
-    onChangeMusicButtonClick: function (button) {
-
-        if (button.getSelectedIndex() === 0) {
-            this.fireEvent(new GameEvent(Events.VOLUME_ON, null));
-        } else {
-            this.fireEvent(new GameEvent(Events.VOLUME_OFF, null));
-        }
-    },
     onOkButtonClick: function (button) {
         this.fireEvent(new GameEvent(Events.BUTTON_CLICK, null));
         var currentQuest = this.gameModel.getCurrentQuest();
@@ -356,31 +333,18 @@ var GameScene = View.extend({
             }
         }
     },
-    onShareFBQuestButtonClick: function (button) {
-        this.fireEvent(new GameEvent(Events.BUTTON_CLICK, null));
-        var url = window.location.href;
-        url += "res/data/" + this.gameModel.getCurrentQuest().image;
-        FacebookUtils.shareQuestToFB(url);
-    },
     onReplayButtonClick: function (button) {
         this.removeFromParent(true);
         if (this.gameNextStageLayer !== null) {
             this.gameNextStageLayer.removeFromParent(true);
         }
         this.gameOverLayer.removeFromParent();
-        // Remove Keyboard Event
-        //cc.eventManager.removeListener(this.keyboardEvent);
-        //this.gameModel.removeEventListener(this._listener);
 
         this.fireEvent(new GameEvent(Events.GAMESCENE_REPLAY_CLICK, null));
     },
     onNextStageButtonClick: function (button) {
         this.removeChild(this.gameNextStageLayer, true);
         this.fireEvent(new GameEvent(Events.GAMESCENE_NEXT_STAGE_CLICK, null));
-    },
-    onBackStageButtonClick: function (button) {
-        this.removeChild(this.helpLayer, true);
-        //this.fireEvent(new GameEvent(Events.GAMESCENE_NEXT_STAGE_CLICK, null));
     },
     processGameOver: function (event) {
         this.questionLayer.removeFromParent(true);
@@ -393,23 +357,26 @@ var GameScene = View.extend({
         this.gameOverLayer.addChild(gameOverBoardSprite, 2);
 
         var avgWidth = gameOverBoardSprite.getContentSize().width / 2;
-        var avgHeight = gameOverBoardSprite.getContentSize().height;
+        var avgHeight = gameOverBoardSprite.getContentSize().height - 80;
 
-        var gameOverLogoSprite;
+        var titleLabel;
+        var level;
         if (event.getEventCode() === Events.GAMEMODEL_GAME_OVER) {
-            gameOverLogoSprite = cc.Sprite.create(res.GAMEOVER_LOGO);
+            level = this.gameModel.getCurrentQuestIndex() + 1;
+            titleLabel = new cc.LabelTTF("Thua Cuộc", res.FontCustom, 72);
         } else {
-            gameOverLogoSprite = cc.Sprite.create(res.WIN_LOGO);
+            level = this.gameModel.getCurrentQuestIndex();
+            titleLabel = new cc.LabelTTF("Thắng Cuộc", res.FontCustom, 72);
         }
 
-        gameOverLogoSprite.setPosition(avgWidth, avgHeight);
-        gameOverBoardSprite.addChild(gameOverLogoSprite, 2);
+        titleLabel.setColor(cc.color(65, 27, 9));
+        titleLabel.setPosition(avgWidth, avgHeight);
+        gameOverBoardSprite.addChild(titleLabel, 2);
 
         var menuGameOver = cc.Menu.create();
         menuGameOver.setPosition(0, 0);
         gameOverBoardSprite.addChild(menuGameOver);
 
-        var level = this.gameModel.getCurrentQuestIndex() + 1;
         var levelStr = "Cấp Độ: " + level;
         var levelLabel = new cc.LabelTTF(levelStr, res.FontCustom, 46);
         levelLabel.setColor(cc.color(65, 27, 9));
@@ -417,22 +384,13 @@ var GameScene = View.extend({
         gameOverBoardSprite.addChild(levelLabel);
 
         var replayButton = cc.MenuItemImage.create(res.Replay1_png, res.Replay2_png);
-        replayButton.setPosition(gameOverBoardSprite.getContentSize().width / 2 - 125, 15);
+        replayButton.setPosition(gameOverBoardSprite.getContentSize().width / 2, 15);
         menuGameOver.addChild(replayButton);
         replayButton.setCallback(this.onReplayButtonClick, this);
-
-        var quitButton = cc.MenuItemImage.create(res.Quit1_png, res.Quit2_png);
-        quitButton.setPosition(gameOverBoardSprite.getContentSize().width / 2 + 125, 15);
-        quitButton.setCallback(this.onQuitGameClick, this);
-        menuGameOver.addChild(quitButton);
     },
     processUseHelp: function () {
-        var indexToHide = this.gameModel.getStar();
-        this.starLayer.removeChild(this.starLayer.getChildren()[indexToHide], true);
-        var starSprite = new cc.Sprite(res.InGameStar_BG_png);
-        starSprite.setPosition(cc.director.getVisibleSize().width - starSprite.getContentSize().width * (GameModel.TOTAL_STAR - indexToHide) + 5,
-        cc.director.getVisibleSize().height - starSprite.getContentSize().height / 2 - 5);
-        this.starLayer.addChild(starSprite);
+        var indexToHide = this.gameModel.getStar() - 1;
+        this.helpLabel.setString("Bạn còn " + indexToHide + " sự trợ giúp");
 
         //Show Char Help            
         var unanswerPosIndexList = [];
@@ -464,53 +422,6 @@ var GameScene = View.extend({
                 }
             }
         }
-    },
-    onShareFBButtonClick: function () {
-        this.fireEvent(new GameEvent(Events.BUTTON_CLICK, null));
-        var score = this.gameModel.getScore();
-        var scoreStr = "" + score;
-        FacebookUtils.shareToFB(scoreStr);
-    },
-    onBackStartScene: function (button) {
-        this.quitLayer = new QuitLayer(this);
-        this.addChild(this.quitLayer, 3);
-        this.isTimeup = false;
-        this.fireEvent(new GameEvent(Events.GAMEMODEL_STOP_GAME, null));
-    },
-    resumeGame: function (button) {
-        this.fireEvent(new GameEvent(Events.BUTTON_CLICK, null));
-        this.removeChild(this.quitLayer, true);
-        var gameModel = GameModel.getInstance();
-        if (this.gameModel.getRemainingTime() < 8.0 && this.isTimeup === false) {
-            this.fireEvent(new GameEvent(Events.GAME_COUNTDOWN, null));
-            this.isTimeup = true;
-        }
-        gameModel.continueGame();
-    },
-    onQuitGameClick: function (button) {
-        // Remove Keyboard Event
-        cc.eventManager.removeListener(this.keyboardEvent);
-        this.gameModel.removeEventListener(this._listener);
-
-        this.fireEvent(new GameEvent(Events.BACKSTART_SCENE, null));
-    },
-    onRankButtonClick: function (button) {
-        this.fireEvent(new GameEvent(Events.BUTTON_CLICK, null));
-        this.fireEvent(new GameEvent(Events.STOP_EFFECT, null));
-        this.gameModel.getRank100();
-        this.gameOverLayer.setVisible(false);
-        this.rankLayer = new RankLayer(this, this.onBackGameOver);
-        this.addChild(this.rankLayer, 3);
-
-    },
-    backGameOverLayer: function (button) {
-        this.fireEvent(new GameEvent(Events.BUTTON_CLICK, null));
-        this.rankLayer.removeFromParent(true);
-        this.gameOverLayer.setVisible(true);
-    },
-    onBackGameOver: function (button) {
-        this.fireEvent(new GameEvent(Events.BUTTON_CLICK, null));
-        this.backGameOverLayer();
     },
     backStartScene: function () {
         // Remove Keyboard Event
@@ -571,32 +482,5 @@ var GameScene = View.extend({
                 }
             }
         }
-    },
-    processLineBreak: function (sourceString, maxLengthPerLine) {
-        var result = "";
-        var sourceArray = sourceString.split("");
-
-        var currentMaxIndex = maxLengthPerLine;
-        var currentMinIndex = 0;
-
-        while (currentMaxIndex < sourceArray.length) {
-            var spaceIndex = currentMaxIndex;
-            if (sourceArray[currentMaxIndex] !== " ") {
-                for (var i = currentMaxIndex - 1; i >= currentMinIndex; i--) {
-                    if (sourceArray[i] === " ") {
-                        spaceIndex = i;
-                        break;
-                    }
-                }
-            }
-            console.log(spaceIndex);
-            sourceArray.splice(spaceIndex, 0, "\n");
-
-            currentMinIndex = spaceIndex + 1;
-            currentMaxIndex = currentMinIndex + maxLengthPerLine;
-        }
-        result = sourceArray.join("");
-        console.log(result);
-        return result;
     }
 }); 
