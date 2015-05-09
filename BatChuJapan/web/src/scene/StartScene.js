@@ -61,23 +61,7 @@ var StartScene = View.extend({
         var playItem = cc.MenuItemImage.create(res.PlayGame_png, res.PlayGameSelect_png);
         playItem.setPosition(size.width / 2, 200);
         playItem.setCallback(this.onPlayGame, this);
-        this.menu.addChild(playItem, 2);
-
-        if (this.gameModel.resourceModel.getEventLink() !== null && this.gameModel.resourceModel.getEventLink() !== "") {
-            var eventSpriteNormal = cc.Sprite.create(res.EVENT_BUTTON_1_PNG);
-            var frame1 = new cc.SpriteFrame(res.EVENT_BUTTON_1_PNG, cc.rect(0, 0, eventSpriteNormal.getContentSize().width, eventSpriteNormal.getContentSize().height));
-            var frame2 = new cc.SpriteFrame(res.EVENT_BUTTON_2_PNG, cc.rect(0, 0, eventSpriteNormal.getContentSize().width, eventSpriteNormal.getContentSize().height));
-            var frame3 = new cc.SpriteFrame(res.EVENT_BUTTON_3_PNG, cc.rect(0, 0, eventSpriteNormal.getContentSize().width, eventSpriteNormal.getContentSize().height));
-            var animationFrames = [frame1, frame2, frame3];
-            var animation = new cc.Animation(animationFrames, 0.3, true);
-            eventSpriteNormal.runAction(cc.animate(animation).repeatForever());
-            var eventSpriteSelected = cc.Sprite.create(res.EVENT_BUTTON_1_PNG);
-
-            var eventItem = cc.MenuItemSprite.create(eventSpriteNormal, eventSpriteSelected);
-            eventItem.setPosition(size.width - eventItem.getContentSize().width / 2, eventItem.getContentSize().height / 2);
-            eventItem.setCallback(this.onEventButtonClick, this);
-            this.menu.addChild(eventItem, 2);
-        }
+        this.menu.addChild(playItem, 2);        
 
         this.mainLayer.addChild(this.menu, 3);
     },

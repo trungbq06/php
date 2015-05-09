@@ -5,17 +5,15 @@ import java.util.List;
 
 public class DataGame {
 
-    private int answerTime;
-    private String eventLink;
+    private int answerTime;    
     private List<Question> questionList;
 
     public DataGame() {
         questionList = new ArrayList<>();
     }
 
-    public DataGame(int answerTime, String eventLink, List<Question> questionList) {
-        this.answerTime = answerTime;
-        this.eventLink = eventLink;
+    public DataGame(int answerTime, List<Question> questionList) {
+        this.answerTime = answerTime;        
         this.questionList = questionList;
     }
 
@@ -25,15 +23,7 @@ public class DataGame {
 
     public void setAnswerTime(int answerTime) {
         this.answerTime = answerTime;
-    }
-
-    public String getEventLink() {
-        return eventLink;
-    }
-
-    public void setEventLink(String eventLink) {
-        this.eventLink = eventLink;
-    }
+    }   
 
     public List<Question> getQuestionList() {
         return questionList;

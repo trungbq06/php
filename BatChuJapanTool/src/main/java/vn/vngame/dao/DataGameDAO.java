@@ -24,6 +24,7 @@ public class DataGameDAO {
 
         String everything = FileUtils.readFileToString(new File("data\\questions.txt"), "UTF-8");
         String decryptData = EncryptUtils.decrypt(everything, "ViettelWapGame");
+        System.out.println(decryptData);
         Gson gson = new Gson();
         dataGame = gson.fromJson(decryptData, DataGame.class);
     }

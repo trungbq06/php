@@ -86,7 +86,7 @@ public class ManageAnswerTimeDialog extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
-        tfTime.setText(dataGameDAO.getDataGame().getAnswerTime() + "");
+        tfTime.setText((dataGameDAO.getDataGame().getAnswerTime() - 1) + "");
     }//GEN-LAST:event_formComponentShown
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

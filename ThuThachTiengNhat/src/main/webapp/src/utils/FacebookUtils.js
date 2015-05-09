@@ -22,7 +22,7 @@ function shareScore(scoreVar, text) {
     FB.ui({
         method: 'feed',
         name: 'Thử Thách Tiếng Nhật',
-        link: "http://hoctiengnhat24honline.com",
+        link: "http://hoctiengnhat24honline.com/pages/ThuThach.php",
         caption: 'Tớ đã đạt được ' + scoreVar + ' điểm ở mức ' + text + ', còn các bạn thì sao ^^',
         picture: 'http://hoctiengnhat24honline.com/UploadFile//uploads/2015-04-16-09-36-40.png'
     }, function (response) {
@@ -33,7 +33,7 @@ function shareGame() {
     FB.ui({
         method: 'feed',
         name: 'Thử Thách Tiếng Nhật',
-        link: "http://hoctiengnhat24honline.com",
+        link: "http://hoctiengnhat24honline.com/pages/ThuThach.php",
         caption: 'Game hay quá, mọi người cùng chơi nào ^^!',
         picture: 'http://hoctiengnhat24honline.com/UploadFile//uploads/2015-04-16-09-36-40.png'
     }, function (response) {

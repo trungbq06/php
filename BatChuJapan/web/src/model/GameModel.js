@@ -59,8 +59,7 @@ var GameModel = Model.extend({
             var _this = this;
             cc.loader.loadImg("res/data/" + this.questionListContinue[0].image, {"isCrossOrigin": false}, function () {
                 _this.nextLocation();
-            });
-            cc.loader.loadImg("res/data/" + this.questionListContinue[0].imageResult);
+            });            
         } else {
             this.nextLocation();
         }
@@ -78,12 +77,10 @@ var GameModel = Model.extend({
         // Preload 2 next question
         if ((this.currentQuestIndex + 1) < GameModel.TOTAL_QUEST) {
             cc.loader.loadImg("res/data/" + this.questionListContinue[this.currentQuestIndex + 1].image);
-            cc.loader.loadImg("res/data/" + this.questionListContinue[this.currentQuestIndex + 1].imageResult);
         }
 
         if ((this.currentQuestIndex + 2) < GameModel.TOTAL_QUEST) {
             cc.loader.loadImg("res/data/" + this.questionListContinue[this.currentQuestIndex + 2].image);
-            cc.loader.loadImg("res/data/" + this.questionListContinue[this.currentQuestIndex + 2].imageResult);
         }
 
         this.numOfStar = 3;
