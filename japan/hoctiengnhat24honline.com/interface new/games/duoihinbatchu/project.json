@@ -1,0 +1,26 @@
+{
+    "project_type": "javascript",
+    "debugMode": 1,
+    "showFPS": false,
+    "frameRate": 60,
+    "id": "gameCanvas",
+    "renderMode": 0,
+    "engineDir": "frameworks/cocos2d-html5",
+    "modules": [ "core", "extensions" ],
+    "jsList": [
+        "src/utils/Utils.js",
+        "src/resource.js",
+        "src/Events.js",
+        "src/mvc/GameHandler.js",
+        "src/handler/BusinessHandler.js",
+        "src/mvc/Controller.js",
+        "src/mvc/GameEvent.js",
+        "src/mvc/Model.js",
+        "src/mvc/View.js",
+        "src/model/GameModel.js",       
+        "src/model/SoundModel.js",
+        "src/model/ResourceModel.js",      
+        "src/scene/GameScene.js",       
+        "src/scene/StartScene.js"
+    ]
+}
