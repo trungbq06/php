@@ -48,6 +48,7 @@ include '../dao/GameDAO.php';
 				margin-top: 10px;
 				width: 200px;
 			}
+
         </style>
     </head>
 
@@ -80,7 +81,7 @@ include '../dao/GameDAO.php';
 									<?php 
 										if(readGameById($id)->mobile == 1){
 									?>
-									<iframe src="<?php echo readGameById($id)->path ?>" width="800" height="600"></iframe>
+									<iframe src="<?php echo readGameById($id)->path ?>" width="800" height="600" scrolling="no"></iframe>
 									<?php } else{ ?>
 									<object width="800" height="600" data="<?php echo readGameById($id)->path ?>" type="application/x-shockwave-flash"><param name="allowfullscreen" value="true"><param name="wmode" value="transparent"></object>
 									<?php } ?>

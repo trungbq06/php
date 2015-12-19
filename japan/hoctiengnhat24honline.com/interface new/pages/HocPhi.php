@@ -104,7 +104,37 @@ session_start();
                                                     <img src="images/arrow-left.jpg" height="50" alt="" /></td>
                                             </tr>
                                         </table></p>									
-                                    </div>															<br />                                <br />									<p> * Chuyển khoản từ ngân hàng, sau đó gửi biên lai chuyển tiền vào Email: hoctiengnhat24h@gmail.com hoặc gọi vào số 096.663.48.97</p>									<p>Ngân hàng TMCP Công Thương Việt Nam (VIETINBANK)</p>									<p>Số tài khoản: 711A25466562</p>									<p>Tên tài khoản: Hà Phú An</p>									<p>Chi Nhánh Phú Thọ</p>
+                                    </div>															<br />                                <br />									
+									<p> * Chuyển khoản từ ngân hàng, sau đó gửi biên lai chuyển tiền vào Email: hoctiengnhat24h@gmail.com hoặc gọi vào số 096.663.48.97</p>				
+									<p>Ngân hàng TMCP Công Thương Việt Nam (VIETINBANK)</p>
+									<p>Số tài khoản: 711A25466562</p>
+									<p>Tên tài khoản: Hà Phú An</p>
+									<p>Chi Nhánh Phú Thọ</p>
+									<br />
+
+									<p>Ngân Hàng TMCP Ngoại Thương Việt Nam (VIETCOMBANK)</p>
+									<p>Số tài khoản: 0451.000.265.627</p>
+									<p>Chủ tài khoản: HÀ PHÚ AN</p>
+									<p>Chi Nhánh Thanh Xuân Hà Nội</p>
+									<br />
+									
+									<p>Ngân Hàng TMCP Đầu Tư Và Phát Triển Việt Nam (BIDV)</p>
+									<p>Số tài khoản: 2201.0000.500.239</p>
+									<p>Chủ tài khoản: HÀ PHÚ AN</p>
+									<p>Chi Nhánh Thăng Long</p>
+									<br />
+									
+									<p>Ngân hàng (TECHCOMBANK) Hà Nội</p>
+									<p>Số tài khoản: 1902.7760.574.011</p>
+									<p>Chủ tài khoản: HÀ PHÚ AN</p>
+									<p>Chi Nhánh Hà Nội</p>
+									<br />
+									
+									<p>Ngân hàng (HDBANK) Hà Nội</p>
+									<p>Số tài khoản: 0137.0407.0012.547</p>
+									<p>Chủ Tài Khoản: HÀ PHÚ AN</p>
+									<p>Chi Nhánh Hà Nội</p>
+									<br />
                             </article>
                             <!-- Body Menu -->
                             <?php include'templates/BodyMenu.php' ?>
