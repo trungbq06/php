@@ -1,0 +1,25 @@
+/* CSS Document */
+
+body {
+	padding-bottom: 40px;
+}
+.sidebar-nav {
+	padding: 9px 0;
+}
+.user_roles{
+	padding:5px 10px 0 0 !important;
+}
+.clear{
+	clear:both;
+}
+.bor{
+	border:1px solid #ccc;
+	border-radius:3px;
+}
+.center{
+	text-align:center !important;
+}
+
+[id^=module_]{
+	display: none;
+}

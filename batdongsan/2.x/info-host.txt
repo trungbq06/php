@@ -1,3 +1,6 @@
+domain
+http://dns.net.vn  Domain: chungcuviet247.com  Pass: 7159b2a1
+
 hosting12.viettelidc.com.vn
 chungcu2
 123!@#
