@@ -16,11 +16,11 @@
                             <div class="col-md-6 col-sm-8 col-xs-12">
                                 <h1>{$value.name}</h1>
                                 <div class="sp-info">
-                                	<p><label>Giá khuyến mãi:</label> <strong style="color: #f40;">{$value.price_sale}</strong></p>
-                                    <p><label>Giá cũ:</label> <strong style="text-decoration:line-through;">{$value.price}</strong></p>
-                                    <p><label>Xuất xứ/Nguồn:</label> {$value.maker}</p>
+                               	    <p><label>Giá bán:</label> <strong style="color: #f40;">{$value.price_sale}</strong></p>
+                                    <!--<p><label>Giá cũ:</label> <strong style="text-decoration:line-through;">{$value.price}</strong></p>-->
+                                    <p><label>Chủ đầu tư:</label> {$value.maker}</p>
                                     <p><label>Danh mục:</label> {$value.category}</p>
-                                    <p><label>Mã sản phẩm:</label> {$value.code}</p>
+                                    <p><label>Địa chỉ:</label> {$value.code}</p>
                                     <p style="font-size: 13px;">{$value.description}</p>
                                 </div>
                                <!--  <div class="btn_cart">

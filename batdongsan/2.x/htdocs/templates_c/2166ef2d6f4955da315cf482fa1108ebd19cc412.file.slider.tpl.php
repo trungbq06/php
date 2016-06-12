@@ -24,13 +24,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'version' => 'Smarty-3.1.18',
   'unifunc' => 'content_5746f826db9318_25654532',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5746f826db9318_25654532')) {function content_5746f826db9318_25654532($_smarty_tpl) {?><ul class="bxslider">
+<?php if ($_valid && !is_callable('content_5746f826db9318_25654532')) {function content_5746f826db9318_25654532($_smarty_tpl) {?><ul class="bxslider">
     <?php  $_smarty_tpl->tpl_vars['data'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['data']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['gallery_p2']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['data']->key => $_smarty_tpl->tpl_vars['data']->value) {
 $_smarty_tpl->tpl_vars['data']->_loop = true;
-?>
+?>
     <li><img src="<?php echo $_smarty_tpl->tpl_vars['data']->value['img'];?>
-" title="Funky roots" /></li>
-    <?php } ?>
+" title="Funky roots" /></li>
+    <?php } ?>
 </ul><?php }} ?>

@@ -1,4 +1,3 @@
-
                     {foreach from=$article_news item=list}
                      <div class="news box desktop">
                         <h3>{$list.name} <i class="glyphicon glyphicon-plus pull-right"></i></h3>
@@ -33,12 +32,12 @@
                           <ul class="link-support">
                             
                              <li class="boss">
-                                <h3><i class="telephone ">BIDTRACO@gmail.com</i></h3> <!--homephone-->
+                                <h3><i class="telephone ">chungcuviet247@gmail.com</i></h3> <!--homephone-->
                              </li>
                             
                              <li class="area">
-                                <p class="tit"><a href="">hotline</a></p>
-                                <p class="phone"><i class="usephone"></i>0917.291.339<span></span></p>
+                                <p class="tit">Hotline</p>
+                                <p class="phone"><i class="usephone"></i>0978 205 104<span></span></p>
                                 
                              </li>
                              

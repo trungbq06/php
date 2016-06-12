@@ -3,6 +3,7 @@
 <meta charset="UTF-8">
 <base href="{$domain}"></base>
 <title>{if $seo.title neq NULL} {$seo.title} - {/if}{$info.web_title}</title>
+<link rel="icon" href="http://chungcuviet247.com/uploads/galleries/96-2016.05.27.032157.png" type="image/png" sizes="16x16">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="keywords" content="{if $seo.keyword neq NULL} {$seo.keyword} {else} {$info.web_keyword} {/if}" />
@@ -31,3 +32,4 @@
 
 <script type="text/javascript" src="webroot/libs/jquery.bxslider/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="webroot/libs/etalage/js/hoverZoomjquery.etalage.min.js"></script>
+<script type="text/javascript" src="webroot/libs/analyzer/google.js"></script>

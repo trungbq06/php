@@ -24,22 +24,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'version' => 'Smarty-3.1.18',
   'unifunc' => 'content_544b0a1f30bd63_21661158',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_544b0a1f30bd63_21661158')) {function content_544b0a1f30bd63_21661158($_smarty_tpl) {?><div>
-    <ul class="breadcrumb">
+<?php if ($_valid && !is_callable('content_544b0a1f30bd63_21661158')) {function content_544b0a1f30bd63_21661158($_smarty_tpl) {?><div>
+    <ul class="breadcrumb">
     	<?php  $_smarty_tpl->tpl_vars['list'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['list']->_loop = false;
  $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['menu']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['list']->key => $_smarty_tpl->tpl_vars['list']->value) {
 $_smarty_tpl->tpl_vars['list']->_loop = true;
  $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['list']->key;
-?>
-        <li>
+?>
+        <li>
             <i class="<?php echo $_smarty_tpl->tpl_vars['list']->value['icon'];?>
 "></i> <a href="<?php echo $_smarty_tpl->tpl_vars['list']->value['alias'];?>
 "> <?php echo $_smarty_tpl->tpl_vars['list']->value['name'];?>
-</a> <span class="divider">|</span>
-        </li>
-        <?php } ?>
-    </ul>
-</div>
+</a> <span class="divider">|</span>
+        </li>
+        <?php } ?>
+    </ul>
+</div>
 <?php }} ?>

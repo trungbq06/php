@@ -26,43 +26,43 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'version' => 'Smarty-3.1.18',
   'unifunc' => 'content_564148df6c6b59_71580048',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_564148df6c6b59_71580048')) {function content_564148df6c6b59_71580048($_smarty_tpl) {?><div class="content" style="padding-left:0px !important;">
+<?php if ($_valid && !is_callable('content_564148df6c6b59_71580048')) {function content_564148df6c6b59_71580048($_smarty_tpl) {?><div class="content" style="padding-left:0px !important;">
      <?php  $_smarty_tpl->tpl_vars['list'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['list']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['construction']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['list']->key => $_smarty_tpl->tpl_vars['list']->value) {
 $_smarty_tpl->tpl_vars['list']->_loop = true;
-?>
+?>
     <h3><?php echo $_smarty_tpl->tpl_vars['list']->value['name'];?>
-</h3>
-    <div class="products-box">
-
+</h3>
+    <div class="products-box">
+
         <?php  $_smarty_tpl->tpl_vars['data'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['data']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['list']->value['article']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['data']->key => $_smarty_tpl->tpl_vars['data']->value) {
 $_smarty_tpl->tpl_vars['data']->_loop = true;
-?>
-        <div class="col-item col-md-3 col-sm-6 col-xs-6 col-default">
-            <div class="item">
+?>
+        <div class="col-item col-md-3 col-sm-6 col-xs-6 col-default">
+            <div class="item">
                  <a href="<?php echo $_smarty_tpl->tpl_vars['data']->value['link'];?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['data']->value['img'];?>
-"></a>
-                 <p class="name">
+"></a>
+                 <p class="name">
                      <a href="<?php echo $_smarty_tpl->tpl_vars['data']->value['link'];?>
 "><?php echo $_smarty_tpl->tpl_vars['data']->value['name'];?>
-</a>
-                 </p>
-            </div>
-        </div>
-        <?php } ?>
-       <?php } ?>
-    </div>
-</div><!--end .content-->
+</a>
+                 </p>
+            </div>
+        </div>
+        <?php } ?>
+       <?php } ?>
+    </div>
+</div><!--end .content-->
 <?php  $_smarty_tpl->tpl_vars['list'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['list']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['gallery_p5']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['list']->key => $_smarty_tpl->tpl_vars['list']->value) {
 $_smarty_tpl->tpl_vars['list']->_loop = true;
-?>
+?>
 <a href="<?php echo $_smarty_tpl->tpl_vars['list']->value['link'];?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['list']->value['img'];?>
-" width="100%"></a>
+" width="100%"></a>
 <?php } ?><?php }} ?>

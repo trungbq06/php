@@ -1,4 +1,3 @@
-
 <div class="content" style="padding-left: 0px !important;">
                        
                         <div class="products-box">
@@ -6,12 +5,11 @@
                             <div class="post-553 post type-post status-publish format-standard hentry category-uncategorized" id="post-553">
                             <h3>{$trans.contact_wellcome}</h3>
                             <div class="entry">
-                            	<h5>Công ty CP tư vấn xây dựng và Thương mại Vitraco Việt Nam</h5>
-                                <p>Địa chỉ: Phường Phú Đô - Quận Nam Từ Liêm - Thành phố Hà nội</p>
-                                <p>Điện thoại: 0917291339</p>
-                                <p>Mobile: 01686.934.289 – 0938.179.588</p>
-                                <p>Email: BIDTRACO@GMAIL.COM</p>
-
+                            	<h5>Công ty CP đầu tư và thương mại Hoàng Vinh</h5>
+                                <p>Địa chỉ: Số 207, Tòa nhà C3, Đ.Nguyễn Cơ Thạch, Mỹ Đình 1, Nam Từ Liêm, TP.Hà Nội</p>
+                                <p>Điện thoại: 0978 205 104</p>
+                                <p>Email: chungcuviet247@gmail.com</p>
+<br />
                                 <form>
                                 	
                                 </form>
