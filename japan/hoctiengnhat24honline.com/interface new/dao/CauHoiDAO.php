@@ -10,7 +10,7 @@
 	function readCauHoi($IdDeThi)
 	{
 		include 'config.php';	
-		$sql="SELECT * FROM cauhoi WHERE IdDeThi=".$IdDeThi;
+		$sql="SELECT * FROM cauhoi WHERE IdDeThi=".$IdDeThi." ORDER BY Id";
 		$result = mysql_query($sql, $conn);
 		$arr = array();
 		while($row = mysql_fetch_array($result))

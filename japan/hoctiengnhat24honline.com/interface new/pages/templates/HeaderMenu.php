@@ -3,11 +3,12 @@
         <ul id="menu">
             <li><a href="Home.php"><p>Giới Thiệu</p></a></li>
             <li><a href="TiengNhat.php">Tiếng Nhật</a></li>
+            <li><a href="DSBaiHocOnTap.php?IdLearning=20">Ôn Tập</a></li>
             <li><a href="ThuThach.php">Thử Thách</a></li>
-			<li><a href="LTEnglish.php">Tiếng Anh</a></li>
+	    <li><a href="LTEnglish.php">Tiếng Anh</a></li>
             <li><a href="HocMienPhi-TaiLieu.php">Tài Liệu</a></li>
             <li><a href="HocPhi.php">Học Phí</a></li>
-            <li class="end"><a href="Contact.php">Liên Hệ</a></li>
+            <!--<li class="end"><a href="Contact.php">Liên Hệ</a></li>-->
         </ul>
     </nav>
     <!--<ul id="icon">

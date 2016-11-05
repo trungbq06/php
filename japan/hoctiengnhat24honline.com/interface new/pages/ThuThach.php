@@ -14,7 +14,7 @@ include '../dao/GameDAO.php';
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Chi Tiết Bài Học</title>
+        <title>Thử Thách</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
         <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">

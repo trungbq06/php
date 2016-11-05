@@ -1,0 +1,10 @@
+[09-Oct-2016 13:56:39 Asia/Ho_Chi_Minh] PHP Warning:  move_uploaded_file(uploads/2016-10-09-13-56-39.png): failed to open stream: No such file or directory in /home/nihongoh/public_html/UploadFile/upload.php on line 23
+[09-Oct-2016 13:56:39 Asia/Ho_Chi_Minh] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpnGUKXA' to 'uploads/2016-10-09-13-56-39.png' in /home/nihongoh/public_html/UploadFile/upload.php on line 23
+[09-Oct-2016 13:56:55 Asia/Ho_Chi_Minh] PHP Warning:  move_uploaded_file(uploads/2016-10-09-13-56-55.png): failed to open stream: No such file or directory in /home/nihongoh/public_html/UploadFile/upload.php on line 23
+[09-Oct-2016 13:56:55 Asia/Ho_Chi_Minh] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php4xM0hM' to 'uploads/2016-10-09-13-56-55.png' in /home/nihongoh/public_html/UploadFile/upload.php on line 23
+[09-Oct-2016 13:57:04 Asia/Ho_Chi_Minh] PHP Warning:  move_uploaded_file(uploads/2016-10-09-13-57-04.jpg): failed to open stream: No such file or directory in /home/nihongoh/public_html/UploadFile/upload.php on line 23
+[09-Oct-2016 13:57:04 Asia/Ho_Chi_Minh] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpvA4YmV' to 'uploads/2016-10-09-13-57-04.jpg' in /home/nihongoh/public_html/UploadFile/upload.php on line 23
+[09-Oct-2016 14:25:40 Asia/Ho_Chi_Minh] PHP Warning:  POST Content-Length of 11708427 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[10-Oct-2016 20:38:16 Asia/Ho_Chi_Minh] PHP Warning:  POST Content-Length of 12889495 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[10-Oct-2016 20:44:32 Asia/Ho_Chi_Minh] PHP Warning:  POST Content-Length of 12889495 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[10-Oct-2016 20:44:32 Asia/Ho_Chi_Minh] PHP Warning:  POST Content-Length of 12889495 bytes exceeds the limit of 8388608 bytes in Unknown on line 0

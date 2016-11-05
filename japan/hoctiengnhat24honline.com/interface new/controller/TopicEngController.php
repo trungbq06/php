@@ -18,6 +18,9 @@
 			createDesTopicEng($Content, $IdTopic);
 		
 			$url = "Location:../admin/ThemBGEng.php?IdLearning=".$IdLearning;
+if($IdLearning == 20){
+$url = "Location:../admin/ThemBGOnTap.php?IdLearning=".$IdLearning;
+}
 			Header($url);
 		}else if($btnAction=='Xóa'){
 			$Id = $_POST["Id"];

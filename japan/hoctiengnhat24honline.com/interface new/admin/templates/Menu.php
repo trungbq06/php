@@ -43,6 +43,7 @@
                             </ul>
                         </li>
                         <li><a href="ThemBGEng.php">● Tiếng Anh</a></li>
+                        <li><a href="ThemBGOnTap.php">● Ôn Tập</a></li>
                     </ul>
                 </li>
                 <li><a href="#">● Xóa</a>
@@ -133,6 +134,7 @@
                                 <li><a href="XoaBGEng.php?IdLearning=9">● Kỹ Năng</a></li>
                             </ul>
                         </li>
+                        <li><a href="XoaBGEng.php?IdLearning=20">● Ôn Tập</a></li>
                     </ul>
                 </li>
             </ul>

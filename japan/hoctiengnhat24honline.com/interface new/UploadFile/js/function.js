@@ -83,9 +83,11 @@ function uploadFile(file, index) {
 					var increamCode;
 					
 					if(fileType == 'mp3' || fileType == 'MP3'){
-						increamCode = "<audio controls><source src=\""+url+"uploads/" + server.fileName + "\" type=\"audio/mpeg\"></audio>";
+						increamCode = "<audio controls><source src=\"../UploadFile/uploads/" + server.fileName + "\" type=\"audio/mpeg\"></audio>";
+					}else if (fileType == 'pdf'){
+						increamCode = "<iframe src=\"../UploadFile/uploads/" + server.fileName + "\" width=\"100%\" height=\"800\"></iframe>";
 					}else{					
-						increamCode = "<video width=\"400\" controls><source src=\""+url+"uploads/" + server.fileName + "\" type=\"video/mp4\"></video>";
+						increamCode = "<video width=\"400\" controls><source src=\"../UploadFile/uploads/" + server.fileName + "\" type=\"video/mp4\"></video>";
 					}
 					document.getElementById("content-code").innerHTML = "<textarea rows=\"4\" cols=\"50\">" + increamCode + "</textarea>";
 				} else {

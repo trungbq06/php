@@ -1,1 +1,1 @@
-<?php		$hostname = 'localhost';		$username = "hoctien6_db";		$password = "TiengNhat24h";		$database = "hoctien6_db";		$conn=mysql_connect($hostname, $username, $password);		mysql_select_db($database,$conn);		$result = mysql_query("SET NAMES utf8",$conn);?>
+<?php		$hostname = 'localhost';		$username = "nihongoh_admin";		$password = "123!@#";		$database = "nihongoh_db";		$conn=mysql_connect($hostname, $username, $password);		mysql_select_db($database,$conn);		$result = mysql_query("SET NAMES utf8",$conn);?>

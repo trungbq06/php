@@ -4,8 +4,8 @@
 	  public static $_FUNCTION = "CardCharge";
 	  public static $_VERSION = "2.0";
 	  //Thay đổi 3 thông tin ở phía dưới
-	  public static $_MERCHANT_ID = "34942";
-	  public static $_MERCHANT_PASSWORD = "hoctiengnhat24honline";
+	  public static $_MERCHANT_ID = "47781";
+	  public static $_MERCHANT_PASSWORD = "e13691b10535507c6d3f8e3cda7f375d";
 	  public static $_EMAIL_RECEIVE_MONEY = "hoctiengnhat24h@gmail.com";
   }
   
