@@ -1,8 +1,8 @@
-<?php	
-	class clsPage
-	{
-		public $Id;//string
-		public $Name;//
-		public $Content;//
-	}
+<?php	
+	class clsPage
+	{
+		public $Id;//string
+		public $Name;//
+		public $Content;//
+	}
 ?>

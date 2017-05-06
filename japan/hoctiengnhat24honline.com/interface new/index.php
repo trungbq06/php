@@ -1,3 +1,3 @@
-<?php
-Header("Location:pages/Home.php");
-?>
+<?php
+Header("Location:pages/Home.php");
+?>

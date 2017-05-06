@@ -1,9 +1,9 @@
-<?php	
-	class clsDeThi
-	{
-		public $Id;//string
-		public $Name;//
-		public $IdLevel;//
-		public $IdLearning;//
-	}
+<?php	
+	class clsDeThi
+	{
+		public $Id;//string
+		public $Name;//
+		public $IdLevel;//
+		public $IdLearning;//
+	}
 ?>

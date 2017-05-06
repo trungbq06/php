@@ -1,7 +1,7 @@
-<?php
-	class clsComments{
-		public $Id;
-		public $Comments;
-		public $IdAccount;
-	}
+<?php
+	class clsComments{
+		public $Id;
+		public $Comments;
+		public $IdAccount;
+	}
 ?>

@@ -1,10 +1,10 @@
-@font-face {
-    font-family: Birthday;
-    src: url('res/font/Birthday.ttf') format("truetype");
-}
-::selection {
-  color: #ffffff; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  color: #ffffff; /* Gecko Browsers */
+@font-face {
+    font-family: Birthday;
+    src: url('res/font/Birthday.ttf') format("truetype");
+}
+::selection {
+  color: #ffffff; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  color: #ffffff; /* Gecko Browsers */
 }

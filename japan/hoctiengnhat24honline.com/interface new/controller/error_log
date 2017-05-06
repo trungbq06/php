@@ -48,3 +48,39 @@
 [29-Oct-2016 09:59:14 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10
 [29-Oct-2016 10:00:53 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10
 [29-Oct-2016 11:18:43 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10
+[11-Nov-2016 05:24:03 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10
+[20-Nov-2016 03:23:42 UTC] PHP Warning:  include(../model/clsContact.php): failed to open stream: No such file or directory in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[20-Nov-2016 03:23:42 UTC] PHP Warning:  include(../model/clsContact.php): failed to open stream: No such file or directory in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[20-Nov-2016 03:23:42 UTC] PHP Warning:  include(): Failed opening '../model/clsContact.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[20-Nov-2016 03:23:42 UTC] PHP Notice:  Undefined index: email in /home/nihongoh/public_html/controller/ContactController.php on line 9
+[20-Nov-2016 03:24:07 UTC] PHP Warning:  include(../model/clsContact.php): failed to open stream: No such file or directory in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[20-Nov-2016 03:24:07 UTC] PHP Warning:  include(../model/clsContact.php): failed to open stream: No such file or directory in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[20-Nov-2016 03:24:07 UTC] PHP Warning:  include(): Failed opening '../model/clsContact.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[20-Nov-2016 03:24:07 UTC] PHP Notice:  Undefined index: email in /home/nihongoh/public_html/controller/ContactController.php on line 9
+[20-Nov-2016 03:24:42 UTC] PHP Warning:  include(../model/clsContact.php): failed to open stream: No such file or directory in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[20-Nov-2016 03:24:42 UTC] PHP Warning:  include(../model/clsContact.php): failed to open stream: No such file or directory in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[20-Nov-2016 03:24:42 UTC] PHP Warning:  include(): Failed opening '../model/clsContact.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[20-Nov-2016 03:24:42 UTC] PHP Notice:  Undefined index: email in /home/nihongoh/public_html/controller/ContactController.php on line 9
+[22-Nov-2016 12:38:58 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10
+[22-Nov-2016 12:39:07 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10
+[22-Nov-2016 12:39:12 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10
+[22-Nov-2016 12:39:17 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10
+[30-Nov-2016 16:01:37 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10
+[30-Nov-2016 16:01:41 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10
+[30-Nov-2016 16:01:46 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10
+[01-Dec-2016 06:09:25 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10
+[17-Dec-2016 05:29:16 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10
+[17-Dec-2016 05:53:41 UTC] PHP Warning:  include(../model/clsContact.php): failed to open stream: No such file or directory in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[17-Dec-2016 05:53:41 UTC] PHP Warning:  include(../model/clsContact.php): failed to open stream: No such file or directory in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[17-Dec-2016 05:53:41 UTC] PHP Warning:  include(): Failed opening '../model/clsContact.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[17-Dec-2016 05:53:41 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/ContactController.php on line 5
+[04-Jan-2017 21:46:22 UTC] PHP Warning:  include(../model/clsContact.php): failed to open stream: No such file or directory in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[04-Jan-2017 21:46:22 UTC] PHP Warning:  include(../model/clsContact.php): failed to open stream: No such file or directory in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[04-Jan-2017 21:46:22 UTC] PHP Warning:  include(): Failed opening '../model/clsContact.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[06-Jan-2017 05:53:18 UTC] PHP Warning:  include(../model/clsContact.php): failed to open stream: No such file or directory in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[06-Jan-2017 05:53:18 UTC] PHP Warning:  include(../model/clsContact.php): failed to open stream: No such file or directory in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[06-Jan-2017 05:53:18 UTC] PHP Warning:  include(): Failed opening '../model/clsContact.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/nihongoh/public_html/controller/ContactController.php on line 2
+[09-Feb-2017 14:38:04 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/nihongoh/public_html/dao/AccountDAO.php on line 60
+[15-Feb-2017 02:54:41 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10
+[19-Mar-2017 14:00:16 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/nihongoh/public_html/dao/AccountDAO.php on line 60
+[23-Mar-2017 10:24:43 UTC] PHP Notice:  Undefined index: commit in /home/nihongoh/public_html/controller/AccountController.php on line 10

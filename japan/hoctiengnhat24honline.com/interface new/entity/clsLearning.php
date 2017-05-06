@@ -1,7 +1,7 @@
-<?php	
-	class clsLearning
-	{
-		public $Id;//string
-		public $Name;//
-	}
+<?php	
+	class clsLearning
+	{
+		public $Id;//string
+		public $Name;//
+	}
 ?>

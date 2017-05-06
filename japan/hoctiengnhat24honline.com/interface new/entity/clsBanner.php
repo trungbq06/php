@@ -1,10 +1,10 @@
-<?php	
-	class clsBanner
-	{
-		public $Id;//string
-		public $Name;//
-		public $Position;//string
-		public $Image;//
-		public $Url;//
-	}
+<?php	
+	class clsBanner
+	{
+		public $Id;//string
+		public $Name;//
+		public $Position;//string
+		public $Image;//
+		public $Url;//
+	}
 ?>

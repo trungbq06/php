@@ -1,7 +1,7 @@
-<?php	
-	class clsLevel
-	{
-		public $Id;//string
-		public $Name;//
-	}
+<?php	
+	class clsLevel
+	{
+		public $Id;//string
+		public $Name;//
+	}
 ?>

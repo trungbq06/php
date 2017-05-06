@@ -1,7 +1,7 @@
-<?php	
-	class clsLearnEngTest
-	{
-		public $Id;//string
-		public $Name;//
-	}
+<?php	
+	class clsLearnEngTest
+	{
+		public $Id;//string
+		public $Name;//
+	}
 ?>

@@ -1,7 +1,7 @@
-<?php	
-	class clsGroupMenu
-	{
-		public $Id;//string
-		public $Name;//
-	}
+<?php	
+	class clsGroupMenu
+	{
+		public $Id;//string
+		public $Name;//
+	}
 ?>

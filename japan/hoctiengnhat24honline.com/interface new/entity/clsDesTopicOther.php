@@ -1,8 +1,8 @@
-<?php	
-	class clsDesTopicOther
-	{
-		public $Id;//string
-		public $Content;//
-		public $IdTopicOther;//
-	}
+<?php	
+	class clsDesTopicOther
+	{
+		public $Id;//string
+		public $Content;//
+		public $IdTopicOther;//
+	}
 ?>
