@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "190063779499",
+    "firebase_url": "https://tieng-nhat-chu-de.firebaseio.com",
+    "project_id": "tieng-nhat-chu-de",
+    "storage_bucket": "tieng-nhat-chu-de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190063779499:android:090a275a3497026c",
+        "android_client_info": {
+          "package_name": "com.quangnd.tiengnhatchude"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "190063779499-5ksup5d5u4ua2ketrib20f9ngg6cllp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlqDSjbwA_WpwuLcX7JNVYjTOurZ7OLuc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

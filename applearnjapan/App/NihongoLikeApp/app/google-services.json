@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "948214578977",
+    "firebase_url": "https://nihongolike-87207.firebaseio.com",
+    "project_id": "nihongolike-87207",
+    "storage_bucket": "nihongolike-87207.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948214578977:android:d60f2a4ccf5fea31",
+        "android_client_info": {
+          "package_name": "com.quangnd.nihongolike"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948214578977-glnsik57t43ri1cr97jg3iunhodr8s9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG9mOz9_8nyxCMQpKqNoRCDadERD4LzxE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
