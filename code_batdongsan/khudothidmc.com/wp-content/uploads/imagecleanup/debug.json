@@ -1,0 +1,17 @@
+[0.0047] Info: WP_Query results written to log
+[0.0000] Registered sizes: ["thumbnail","medium","medium_large","large","widget","square","featured","featured_large","extra_large","portfolio","portfolio_small","gallery","magazine","masonry","entry_with_sidebar","entry_without_sidebar","shop_thumbnail","shop_catalog","shop_single","full"]
+[0.0030] Meta indexed so far: 1 / 411
+[0.0065] Sample meta:
+{"width":375,"height":178,"file":"2017\/05\/logo-residences.png","sizes":{"thumbnail":{"file":"logo-residences-80x80.png","width":80,"height":80,"mime-type":"image\/png"},"medium":{"file":"logo-residences-300x142.png","width":300,"height":142,"mime-type":"image\/png"},"widget":{"file":"logo-residences-36x36.png","width":36,"height":36,"mime-type":"image\/png"},"square":{"file":"logo-residences-180x178.png","width":180,"height":178,"mime-type":"image\/png"},"portfolio_small":{"file":"logo-residences-260x178.png","width":260,"height":178,"mime-type":"image\/png"},"shop_thumbnail":{"file":"logo-residences-120x120.png","width":120,"height":120,"mime-type":"image\/png"}},"image_meta":{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0","keywords":[]}}
+[2.1509] Meta indexed so far: 411 / 411
+[2.2142] Info: Valid and Invalid meta results written to log
+[0.0268] Info: Loaded attachments to memory [31.75 mb]
+[1.6056] Info: 5493 Images found [34.75 mb]
+[1.7488] Info: 5493 Invalid images found [35 mb]
+[1.8684] Info: Retrieved attachment images from DB [31 mb]
+[2.0483] Info: Backup meta results written to log [31 mb]
+[0.0153] Posts checked for used images 1/17
+[0.0004] Uknown error: Please see returned value below
+<br />
+<b>Fatal error</b>:  Maximum execution time of 30 seconds exceeded in <b>C:\\xampp\\htdocs\\wordpress\\wp-content\\plugins\\image-cleanup\\image-cleanup.plugin.php</b> on line <b>545</b><br />
+
